@@ -1,5 +1,7 @@
 # Java Logging Example Project
 
+[![Java CI with Gradle](https://github.com/alphaolomi/java-logging-example/actions/workflows/gradle.yml/badge.svg)](https://github.com/alphaolomi/java-logging-example/actions/workflows/gradle.yml)
+
 This Java project demonstrates how to implement and use the `java.util.logging` package for logging purposes. It includes examples of custom logging handlers, formatters, and filters, as well as how to configure logging settings externally using a `logging.properties` file.
 
 ## Features
