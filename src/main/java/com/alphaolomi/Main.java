@@ -4,10 +4,27 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.logging.*;
 
+/**
+ * Main class to demonstrate logging in Java
+ * The class sets up a custom logger with a custom handler and formatter
+ *
+ * @author Alpha
+ * @version 1.0
+ */
 public class Main {
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
+    /**
+     * Constructor for the Main class
+     */
+    public Main() {
+        // This is a constructor
+    }
+
+    /*
+      Static block to load the logging configuration
+     */
     static {
         // Config file in the resources folder
         System.setProperty("java.util.logging.config.file", "src/main/resources/logging.properties");
@@ -19,6 +36,9 @@ public class Main {
         }
     }
 
+    /**
+     * Method to set up the logger with custom handler and formatter
+     */
     private static void setupLogger() {
         // Check if the ConsoleHandler is already added to avoid duplicate logs
         if (logger.getHandlers().length == 0) {
@@ -48,6 +68,12 @@ public class Main {
         }
     }
 
+    /**
+     * Main method to demonstrate logging
+     *
+     * @param args command line arguments
+     *             Not used in this example
+     */
     public static void main(String[] args) {
         setupLogger();
         logger.fine("Starting application...");
