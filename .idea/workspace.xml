@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2af7842-d09b-4979-b135-d2d56d8dbbca" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/alphaolomi/MyHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/alphaolomi/MyHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpURLConnectionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpURLConnectionExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.java-logging [:HttpURLConnectionExample.main()].executor": "Run",
     "Gradle.java-logging [:LoggingExample.main()].executor": "Run",
     "Gradle.java-logging [buildDependents].executor": "Run",
     "Gradle.java-logging [buildNeeded].executor": "Run",
@@ -251,7 +253,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708381602441</updated>
       <workItem from="1708381603648" duration="3386000" />
-      <workItem from="1708385023666" duration="1415000" />
+      <workItem from="1708385023666" duration="2283000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
