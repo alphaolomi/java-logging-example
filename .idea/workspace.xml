@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2af7842-d09b-4979-b135-d2d56d8dbbca" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/FinalClassExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/alphaolomi/HttpClientExampleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpURLConnectionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpURLConnectionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpClientExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alphaolomi/HttpClientExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +83,18 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2cbYAUIK4YAPGpSzHCzdyPRR4lJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.HttpClientExampleTest.executor": "Run",
+    "Gradle.java-logging [:FinalClassExample.main()].executor": "Run",
+    "Gradle.java-logging [:HttpClientExample.main()].executor": "Run",
     "Gradle.java-logging [:HttpURLConnectionExample.main()].executor": "Run",
     "Gradle.java-logging [:LoggingExample.main()].executor": "Run",
     "Gradle.java-logging [buildDependents].executor": "Run",
@@ -125,7 +134,20 @@
       <recent name="com.alphaolomi" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HttpClientExample">
+  <component name="RunManager" selected="Application.FinalClassExample">
+    <configuration name="FinalClassExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.alphaolomi.FinalClassExample" />
+      <module name="java-logging.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.alphaolomi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HttpClientExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.alphaolomi.HttpClientExample" />
       <module name="java-logging.main" />
@@ -152,29 +174,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java-logging [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HttpClientExampleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="javadoc" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.alphaolomi.HttpClientExampleTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="java-logging [outgoingVariants]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="java-logging [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,29 +209,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="outgoingVariants" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="java-logging [properties]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="properties" />
+            <option value="testClasses" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FinalClassExample" />
+        <item itemvalue="Gradle.java-logging [testClasses]" />
+        <item itemvalue="Gradle.HttpClientExampleTest" />
         <item itemvalue="Application.HttpClientExample" />
         <item itemvalue="Application.HttpURLConnectionExample" />
-        <item itemvalue="Gradle.java-logging [javadoc]" />
-        <item itemvalue="Gradle.java-logging [properties]" />
-        <item itemvalue="Gradle.java-logging [outgoingVariants]" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +246,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708381602441</updated>
       <workItem from="1708381603648" duration="3386000" />
-      <workItem from="1708385023666" duration="2283000" />
+      <workItem from="1708385023666" duration="3788000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />

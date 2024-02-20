@@ -9,28 +9,46 @@ import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse.BodyHandlers;
 
 public class HttpClientExample {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        HttpClient client = HttpClient.newHttpClient();
 
-        // Perform a GET request
-        HttpRequest getRequest = HttpRequest.newBuilder()
-                .uri(URI.create("https://httpbin.org/get"))
-                .header("User-Agent", "Java 11 HttpClient Bot")
-                .build();
+    private final HttpService httpService;
 
-        HttpResponse<String> getResponse = client.send(getRequest, BodyHandlers.ofString());
-        System.out.println("GET Response Status Code: " + getResponse.statusCode());
-        System.out.println("GET Response Body: \n" + getResponse.body());
 
-        // Perform a POST request
-        HttpRequest postRequest = HttpRequest.newBuilder()
-                .uri(URI.create("https://httpbin.org/post"))
-                .header("Content-Type", "application/x-www-form-urlencoded")
-                .POST(BodyPublishers.ofString("userName=Java11"))
-                .build();
+    public HttpClientExample(HttpService httpService) {
+        this.httpService = httpService;
+    }
+//    public static void main(String[] args) throws IOException, InterruptedException {
+//        HttpClient client = HttpClient.newHttpClient();
+//
+//        // Perform a GET request
+//        HttpRequest getRequest = HttpRequest.newBuilder()
+//                .uri(URI.create("https://httpbin.org/get"))
+//                .header("User-Agent", "Java 11 HttpClient Bot")
+//                .build();
+//
+//        HttpResponse<String> getResponse = client.send(getRequest, BodyHandlers.ofString());
+//        System.out.println("GET Response Status Code: " + getResponse.statusCode());
+//        System.out.println("GET Response Body: \n" + getResponse.body());
+//
+//        // Perform a POST request
+//        HttpRequest postRequest = HttpRequest.newBuilder()
+//                .uri(URI.create("https://httpbin.org/post"))
+//                .header("Content-Type", "application/x-www-form-urlencoded")
+//                .POST(BodyPublishers.ofString("userName=Java11"))
+//                .build();
+//
+//        HttpResponse<String> postResponse = client.send(postRequest, BodyHandlers.ofString());
+//        System.out.println("\nPOST Response Status Code: " + postResponse.statusCode());
+//        System.out.println("POST Response Body: \n" + postResponse.body());
+//    }
 
-        HttpResponse<String> postResponse = client.send(postRequest, BodyHandlers.ofString());
-        System.out.println("\nPOST Response Status Code: " + postResponse.statusCode());
-        System.out.println("POST Response Body: \n" + postResponse.body());
+
+    public String performGetRequest(String url) throws IOException, InterruptedException {
+        HttpResponse<String> response = httpService.sendRequest(url, "GET", null);
+        return response.body();
+    }
+
+    public String performPostRequest(String url, String params) throws IOException, InterruptedException {
+        HttpResponse<String> response = httpService.sendRequest(url, "POST", params);
+        return response.body();
     }
 }
