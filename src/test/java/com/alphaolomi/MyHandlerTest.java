@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
-// import org.mockito.Mockito.*;
+
 import static org.mockito.Mockito.*;
 public class MyHandlerTest {
 
